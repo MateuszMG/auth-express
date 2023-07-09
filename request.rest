@@ -1,0 +1,25 @@
+GET http://localhost:4002/
+
+
+###
+
+GET http://localhost:4002/api/users/
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg4ODgwNDk5LCJleHAiOjE2ODg4ODA1MDl9.r6zQkB053mfYG9wzW12fA-v1RrTFEHWTM86-gzr2PWk
+
+###
+POST http://localhost:4002/api/auth/refresh
+content-type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg4ODgwNzMwLCJleHAiOjE2ODg4ODQzMzB9.bg-Q2yWttfctiLt6_LodDO36qzsgFHF6NRe763bqUt4"
+}
+
+
+### 
+POST http://localhost:4002/api/auth/login
+content-type: application/json
+
+{
+    "email": "email1",
+    "password": "password1"
+}
